@@ -1,9 +1,9 @@
 use strict;
 use Test::More 0.98;
 
-use Captcha::reCAPTCHA::V3;
+use Captcha::Cloudflare::Turnstile;
 
-my $rc = Captcha::reCAPTCHA::V3->new( secret => 'Dummy' );
+my $rc = Captcha::Cloudflare::Turnstile->new( secret => 'Dummy' );
 
 is eval { $rc->scriptURL() }, undef, "scriptURL fails without sitekey";
 is eval { $rc->scriptTag() }, undef, "scriptTag fails without sitekey";

@@ -3,7 +3,7 @@ use Test::More 0.98;
 
 use Captcha::Cloudflare::Turnstile;
 
-my $secret   = $ENV{RECAPTCHA_TEST_SECRET}   // '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+my $secret   = $ENV{RECAPTCHA_TEST_SECRET}   // '1x0000000000000000000000000000000AA';
 my $response = $ENV{RECAPTCHA_TEST_RESPONSE} // 'dummy-token-for-test-key';
 
 my $rc = Captcha::Cloudflare::Turnstile->new( secret => $secret );
