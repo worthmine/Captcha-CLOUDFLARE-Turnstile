@@ -28,6 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          perl Build.PL
-          ./Build build
-          ./Build test
+          prove -Ilib -l
+#          perl Build.PL
+#          ./Build build
+#          ./Build test
