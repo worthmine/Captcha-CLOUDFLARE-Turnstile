@@ -1,4 +1,4 @@
-package Cloudflare::Turnstile;
+package Captcha::Cloudflare::Turnstile;
 require 5.10.1;
 use strict;
 use warnings;
@@ -73,12 +73,12 @@ __END__
 
 =head1 NAME
 
-Cloudflare::Turnstile - A Perl implementation of Cloudflare Turnstile
+Captcha::Cloudflare::Turnstile - A Perl implementation for Cloudflare Turnstile
 
 =head1 SYNOPSIS
 
- use Cloudflare::Turnstile;
- my $ts = Cloudflare::Turnstile->new(
+ use Captcha::Cloudflare::Turnstile;
+ my $ts = Captcha::Cloudflare::Turnstile->new(
      sitekey => '__YOUR_SITEKEY__', # Optional
      secret  => '__YOUR_SECRET__',  # Required
  );
@@ -97,7 +97,7 @@ Cloudflare::Turnstile - A Perl implementation of Cloudflare Turnstile
 
 =head1 DESCRIPTION
 
-Cloudflare::Turnstile is a subclass of L<Captcha::reCAPTCHA::V3> that implements
+Captcha::Cloudflare::Turnstile is a subclass of L<Captcha::reCAPTCHA::V3> that implements
 the L<Cloudflare Turnstile|https://www.cloudflare.com/products/turnstile/> CAPTCHA service.
 
 It inherits C<verify()>, C<name()>, C<sitekey()>, and the utility methods from the base class,
@@ -111,7 +111,7 @@ Requires only secret when constructing.
 
 You have to get them from L<Cloudflare Turnstile dashboard|https://dash.cloudflare.com/?to=/:account/turnstile>.
 
- my $ts = Cloudflare::Turnstile->new(
+ my $ts = Captcha::Cloudflare::Turnstile->new(
     sitekey    => '__YOUR_SITEKEY__', # Optional
     secret     => '__YOUR_SECRET__',
     query_name => '__YOUR_QUERY_NAME__', # Optional, defaults to 'cf-turnstile-response'

@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up Perl
-        uses: shogo82148/actions-setup-perl@1
+        uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: ${{ matrix.perl }}
 

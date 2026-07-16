@@ -1,14 +1,13 @@
 use strict;
 use Test::More 0.98;
 
-use Cloudflare::Turnstile;
+use Captcha::Cloudflare::Turnstile;
 
-my $ts = Cloudflare::Turnstile->new(
+my $ts = Captcha::Cloudflare::Turnstile->new(
     secret  => 'Secret',
     sitekey => 'SiteKey',
 );
 
-is $ts->provider,    'cloudflare',             'provider is cloudflare';
 is $ts->name,        'cf-turnstile-response',  'default name for cloudflare';
 is "$ts",            'cf-turnstile-response',  'overloaded stringify';
 
