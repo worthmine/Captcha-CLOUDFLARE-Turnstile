@@ -24,7 +24,7 @@ like $scripts, qr|<div class="cf-turnstile" data-sitekey="SiteKey" data-action="
     'scripts includes widget with action';
 
 my $secret   = $ENV{TURNSTILE_TEST_SECRET}   // '1x0000000000000000000000000000000AA';
-my $ts_verify = Cloudflare::Turnstile->new( secret => $secret );
+my $ts_verify = Captcha::Cloudflare::Turnstile->new( secret => $secret );
 my $content = eval { $ts_verify->verify('dummy-token') };
 ok !$@, 'verify() executes without error';
 is ref($content), 'HASH', 'verify() returns hashref';

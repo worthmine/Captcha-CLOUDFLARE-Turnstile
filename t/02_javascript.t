@@ -21,6 +21,7 @@ like $scripts, qr|grecaptcha.execute|, "scripts generates JavaScript";
 $rc->sitekey('Dummy');
 is $rc->scriptURL(), $url, "scriptURL uses stored sitekey";
 
-is $rc->scripts( id => 'Form', debug => 1 ), $test, "succeed to make test scripts";
+my $test = $rc->scripts( id => 'Form', debug => 1 );
+like $test, qr|console\.log\(token\)|, "succeed to make test scripts";
 
 done_testing;
