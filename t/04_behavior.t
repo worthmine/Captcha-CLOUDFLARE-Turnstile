@@ -67,10 +67,11 @@ subtest 'verify_or_die and deny_by_score' => sub {
         query_name => 'custom-response',
     );
 
-    $ts->set_verify_map({
+    my $verify_map = {
         pass => { success => 1 },
         fail => { success => 0, 'error-codes' => ['invalid-input-response'] },
-    });
+    };
+    $ts->set_verify_map($verify_map);
 
     is_deeply $ts->verify_or_die( response => 'pass' ),
         { success => 1 }, 'verify_or_die returns content on success';
@@ -87,11 +88,12 @@ subtest 'verify_or_die and deny_by_score' => sub {
         'verify_or_die requires response',
     );
 
-    my $warn = '';
-    local $SIG{__WARN__} = sub { $warn .= $_[0] };
+    my @warnings;
+    local $SIG{__WARN__} = sub { push @warnings, @_ };
     is_deeply $ts->deny_by_score( response => 'pass' ),
         { success => 1 }, 'deny_by_score delegates to verify';
-    like $warn, qr/not applicable for Cloudflare Turnstile/, 'deny_by_score warns';
+    is scalar @warnings, 1, 'deny_by_score emits one warning';
+    like $warnings[0], qr/not applicable for Cloudflare Turnstile/, 'deny_by_score warns';
 
     like(
         exception { $ts->deny_by_score() },
