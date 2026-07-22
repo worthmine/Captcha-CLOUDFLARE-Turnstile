@@ -1,10 +1,10 @@
 {
-   "abstract" : "A Perl implementation of reCAPTCHA API version v3",
+   "abstract" : "A Perl implementation for Cloudflare Turnstile",
    "author" : [
       "worthmine <worthmine@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.25, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.1.29, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "perl_5"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "Captcha-reCAPTCHA-V3",
+   "name" : "Captcha-CLOUDFLARE-Turnstile",
    "no_index" : {
       "directory" : [
          "t",
@@ -41,12 +41,8 @@
          }
       },
       "runtime" : {
-         "recommends" : {
-            "JSON::PP" : "0"
-         },
          "requires" : {
-            "JSON" : "2.0",
-            "Module::Build::Tiny" : "0.039",
+            "Captcha::reCAPTCHA::V3" : "0.12",
             "perl" : "v5.10.1"
          }
       },
@@ -59,21 +55,21 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/worthmine/Captcha-reCAPTCHA-V3/issues"
+         "web" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile/issues"
       },
-      "homepage" : "https://github.com/worthmine/Captcha-reCAPTCHA-V3",
+      "homepage" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/worthmine/Captcha-reCAPTCHA-V3.git",
-         "web" : "https://github.com/worthmine/Captcha-reCAPTCHA-V3"
+         "url" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile.git",
+         "web" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile"
       }
    },
-   "version" : "0.12",
+   "version" : "0.01",
    "x_authority" : "cpan:WORTHMINE",
    "x_contributors" : [
-      "Yuki Yoshida(worthmine) <2944869+worthmine@users.noreply.github.com>",
-      "worthmine <worthmine@cpan.org>"
+      "Yuki Yoshida <2944869+worthmine@users.noreply.github.com>",
+      "copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>"
    ],
-   "x_serialization_backend" : "JSON::PP version 4.18",
+   "x_serialization_backend" : "JSON::PP version 4.06",
    "x_static_install" : 1
 }
