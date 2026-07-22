@@ -3,7 +3,12 @@ use warnings;
 use Test::More 0.98;
 
 use Captcha::Cloudflare::Turnstile;
-sub exception(&);
+
+sub exception(&) {
+    my ($code) = @_;
+    my $err = eval { $code->(); 1 } ? '' : $@;
+    return $err;
+}
 
 {
     package Captcha::Cloudflare::Turnstile::TestDouble;
@@ -96,9 +101,3 @@ subtest 'verify_or_die and deny_by_score' => sub {
 };
 
 done_testing;
-
-sub exception(&) {
-    my ($code) = @_;
-    my $err = eval { $code->(); 1 } ? '' : $@;
-    return $err;
-}
