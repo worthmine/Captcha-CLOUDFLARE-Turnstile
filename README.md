@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile/actions?workflow=test)
+[![Actions Status](https://github.com/worthmine/Captcha-Cloudflare-Turnstile/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/worthmine/Captcha-Cloudflare-Turnstile/actions?workflow=test)
 # NAME
 
 Captcha::Cloudflare::Turnstile - A Perl implementation for Cloudflare Turnstile

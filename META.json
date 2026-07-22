@@ -55,13 +55,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile/issues"
+         "web" : "https://github.com/worthmine/Captcha-Cloudflare-Turnstile/issues"
       },
-      "homepage" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile",
+      "homepage" : "https://github.com/worthmine/Captcha-Cloudflare-Turnstile",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile.git",
-         "web" : "https://github.com/worthmine/Captcha-CLOUDFLARE-Turnstile"
+         "url" : "https://github.com/worthmine/Captcha-Cloudflare-Turnstile.git",
+         "web" : "https://github.com/worthmine/Captcha-Cloudflare-Turnstile"
       }
    },
    "version" : "0.01",
