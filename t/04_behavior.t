@@ -13,6 +13,11 @@ sub exception(&);
         my ( $self, $response ) = @_;
         return $self->{_verify_map}{$response};
     }
+
+    sub set_verify_map {
+        my ( $self, $map ) = @_;
+        $self->{_verify_map} = $map;
+    }
 }
 
 subtest 'constructor and helper tags' => sub {
@@ -57,10 +62,10 @@ subtest 'verify_or_die and deny_by_score' => sub {
         query_name => 'custom-response',
     );
 
-    $ts->{_verify_map} = {
+    $ts->set_verify_map({
         pass => { success => 1 },
         fail => { success => 0, 'error-codes' => ['invalid-input-response'] },
-    };
+    });
 
     is_deeply $ts->verify_or_die( response => 'pass' ),
         { success => 1 }, 'verify_or_die returns content on success';
