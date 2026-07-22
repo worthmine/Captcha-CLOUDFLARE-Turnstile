@@ -3,7 +3,7 @@ require 5.10.1;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use parent 'Captcha::reCAPTCHA::V3';
 use Carp qw(carp croak);

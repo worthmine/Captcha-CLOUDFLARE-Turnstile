@@ -64,7 +64,7 @@
          "web" : "https://github.com/worthmine/Captcha-Cloudflare-Turnstile"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_authority" : "cpan:WORTHMINE",
    "x_contributors" : [
       "Yuki Yoshida <2944869+worthmine@users.noreply.github.com>",
