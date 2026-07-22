@@ -1,6 +1,7 @@
 Revision history for Perl extension CAPTCHA-CLOUDFLARE-Turnstile
 
 {{$NEXT}}
+    - add some tests
 
 0.01 2026-07-22T06:32:06Z
     - The first release
